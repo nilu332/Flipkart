@@ -29,7 +29,7 @@ async function fetchData() {
                                 <span>(${product.rating})</span>
                             </div>
                             <div class="assured"><img src=${product.assured} alt=""> </div>
-                        </div> 
+                        </div>
                         <div class="third-text">
                             <div class="down-arrow">
                                 <div class="arrow">
@@ -59,7 +59,7 @@ async function fetchData() {
                             <span>${product.warranty}</span>
                         </div>
                     </div>
-                </div>
+                </div>   
                 <div class="small-boxes">
                     <div class="ram-storage">${product.ram}</div>
                     <div class="display">${product.display}</div>
@@ -80,4 +80,3 @@ async function fetchData() {
 }
 
 fetchData();
-
