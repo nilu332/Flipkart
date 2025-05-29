@@ -4,6 +4,7 @@ async function fetchData() {
         const data = await response.json();
         const productList = document.createElement('div');
         productList.className = 'product-list';
+        const aa = document.querySelector('.phone-main-p');
 
         data.map(product => {
             const productDiv = document.createElement('div');
@@ -20,10 +21,10 @@ async function fetchData() {
                         </div>
                         <div class="star-out">
                                  <img src=${product.star1} alt="" class="star_1">
-                                 <img src=${product.star1} alt="" class="star_2">
-                                 <img src=${product.star1} alt="" class="star_3">
-                                 <img src=${product.star1} alt="" class="star_4">
-                                 <img src=${product.star1} alt="" class="star_5">
+                                 <img src=${product.star2} alt="" class="star_2">
+                                 <img src=${product.star3} alt="" class="star_3">
+                                 <img src=${product.star4} alt="" class="star_4">
+                                 <img src=${product.star5} alt="" class="star_5">
 
                             <div class="number">
                                 <span>(${product.rating})</span>
@@ -36,7 +37,7 @@ async function fetchData() {
                                     <svg width="17" height="17" viewBox="0 0 12 12" fill="none">
                                         <path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"></path>
                                     </svg>
-                                    <span>${Math.round(((product.mrp - product.price) / product.mrp) * 100)}%</span>
+                                    <span>${product.percentage}%</span>
                                 </div>
                             </div>
                             <div class="thirty-five">
@@ -72,7 +73,7 @@ async function fetchData() {
             productList.appendChild(productDiv);
         });
 
-        document.body.appendChild(productList); // Append the product list to the body or a specific container
+        aa.appendChild(productList); // Append the product list to the body or a specific container
 
     } catch (error) {
         console.error('Error fetching JSON:', error);
@@ -80,3 +81,22 @@ async function fetchData() {
 }
 
 fetchData();
+document.addEventListener("DOMContentLoaded", () => {
+    const sortContainer = document.querySelector('.sortby');
+    const sortBtn = document.querySelector('.sort');
+
+    sortBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        sortContainer.style.display = 'block';
+        console.log('click');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!sortContainer.contains(e.target) && !sortBtn.contains(e.target)) {
+            if (sortContainer.style.display === 'block') {
+                sortContainer.style.display = 'none';
+            }
+        }
+    });
+});
+
