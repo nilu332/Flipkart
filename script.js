@@ -84,10 +84,12 @@ fetchData();
 document.addEventListener("DOMContentLoaded", () => {
     const sortContainer = document.querySelector('.sortby');
     const sortBtn = document.querySelector('.sort');
+    const overlay = document.querySelector('.overlay');
 
     sortBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); 
+        e.stopPropagation();
         sortContainer.style.display = 'block';
+        overlay.style.display = 'block';
         console.log('click');
     });
 
@@ -95,8 +97,34 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!sortContainer.contains(e.target) && !sortBtn.contains(e.target)) {
             if (sortContainer.style.display === 'block') {
                 sortContainer.style.display = 'none';
+                overlay.style.display = 'none';
+                console.log('Sort menu closed');
             }
         }
     });
+    overlay.addEventListener('onclick', () => {
+        sortContainer.style.display = none;
+        overlay.style.display = 'none';
+    });
+    const filterPanel = document.querySelector('.filter-all');
+    const filterBtn = document.querySelector('.arr');
+
+    filterBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        filterPanel.style.display = 'block';
+        console.log('Filter panel opened');      
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!filterPanel.contains(e.target) && !filterBtn.contains(e.target)) {
+            if (filterPanel.style.display === 'block') {
+                filterPanel.style.display = 'none';
+                console.log('Filter panel closed');
+            }
+        }   
+    });
+    
 });
+
+
 
