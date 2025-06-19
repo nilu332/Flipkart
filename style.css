@@ -806,7 +806,6 @@ label{
     display: none;
     opacity: 0.5;
 }
-
 .filter{
     /* height: 100vh; */
     /* position: absolute; */
@@ -816,7 +815,7 @@ label{
     /* background-color: rgba(0,0,0,0.1); */
     width: 100%;
     bottom: 0;
-}  
+} 
 .filter-inside{
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
@@ -824,6 +823,7 @@ label{
     table-layout: fixed;
     width: 13%;
 }
+
 .arr{
     color: #fff;
     display: table-cell;
@@ -897,6 +897,7 @@ label{
     align-items: center;
     top: 1px;
 }
+
 .filter-all{
     position: relative;
     height: 100vh;
@@ -1003,7 +1004,20 @@ label{
     font-size: 14px;
     font-family: "regular";
 }
-
+.like-btn{
+    bottom: 112px;
+    left: 330px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+.like-red{
+    background: transparent;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    position: relative;
+}
 
 @media  screen and (min-width: 977px) {
     .blue-backg{
@@ -1018,14 +1032,13 @@ label{
         z-index: 10;
         flex-direction: row;
     }
-    .flipkart{
-        height: 100%;
-        min-width: 124px;
-        font-size: 11px;
-        font-style: italic;
-        margin-top: -1px;
-        justify-content: flex-end;
+    .sort{
+        display: none;
+    }
+    .filter{
+        display: none;
+    }
+    .line{
+        display: none;
     }
 }
-
-
