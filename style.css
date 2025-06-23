@@ -1203,4 +1203,115 @@ label{
         margin-left: 5px;
         transform: rotate(270deg);
     }
+    .main-se{
+        min-width: 978px;
+        max-width: 1680px;
+        padding: 8px;
+        width: 100%;
+        position: relative;
+        background: #f0f0f0;
+    }
+    .main-parte{
+        flex: 0 0 280px;
+        max-width: 280px;
+        padding-right: 10px;
+        display: flex;
+    }
+    .side-bar{
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        background-color: #fff;
+    }
+    .fiil{
+        padding: 18px 16px 12px 16px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .fil-text{
+        font-family: "semibold";
+        font-size: 18px;
+        font-weight: 500;
+        color: #212121;
+    }
+    .cate{
+        padding: 16px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .cate-paren{
+        margin-bottom: 5px;
+    }
+    .cate-txt{
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #212121;
+        font-family: "semibold";
+    }
+    .mob-acc{
+        padding: 5px 0;
+        color: #212121;
+        white-space: nowrap;
+    }
+    .acc-arr{
+        display: inline-block;
+        margin-right: 1px;
+        margin-top: 1px;
+        cursor: pointer;
+        fill: #878787;
+    }
+    .acces{
+        color: #878787;
+        width: 150px;
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+        vertical-align: top;
+        font-size: 14px;
+        font-family: "regular";
+        font-weight: 400;
+        line-height: 1.4;
+    }
+    .acces-2{
+        color: #212121;
+        width: 150px;
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+        vertical-align: top;
+        font-size: 14px;
+        font-family: "semibold";
+        font-weight: 400;
+        line-height: 1.4;
+        margin-left: 15px;
+    }
+    .pr{
+        padding: 18px 16px 16px 16px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .pri-txt{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .pri-txt span{
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: .3px;
+        font-family: "semibold";
+    }
+    .plain-box{
+        height: 25px;
+    }
+    .plain-b{
+        height: 100%;
+        position: relative;
+        bottom: -8px;
+        width: 236.810px;
+        background: #e0e0e0;
+        display: inline-block;
+    }
 }
+
+
+
