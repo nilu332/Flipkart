@@ -1308,8 +1308,34 @@ label{
         position: relative;
         bottom: -8px;
         width: 236.810px;
-        background: #e0e0e0;
+        /* background: #e0e0e0; */
         display: inline-block;
+    }
+    .brnd{
+        padding: 16px;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+    }
+    .brn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    .brn-text{
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: .3px;
+        display: inline-block;
+        font-family: "semibold";
+    }
+    .brn svg{
+        display: inline-block;
+        cursor: pointer;
+        width: 6px;
+        height: 11px;
+        transform: rotate(-90deg);
     }
 }
 
